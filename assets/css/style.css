@@ -1350,6 +1350,11 @@ a {
   min-width: 80px;
   padding: 12px; }
 
+.btn__prev,
+.btn__next {
+  min-width: 160px;
+  height: 42px; }
+
 .btn--active {
   background-color: #3fb871;
   color: #fff; }
@@ -1550,6 +1555,8 @@ a {
 .pagination__wrap {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px; }
   .pagination__wrap .pagination {
