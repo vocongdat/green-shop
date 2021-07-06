@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-commerce website to order decorative plants online">
+    <meta name="robots" content="noindex">
+    <title>Green Shop</title>
+    <link rel="icon" href="https://webon.qodeinteractive.com/wp-content/uploads/2020/11/cropped-favicon-img-1-180x180.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./assets/css/style.css"><!--[if lte IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha512-qWVvreMuH9i0DrugcOtifxdtZVBBL0X75r9YweXsdCHtXUidlctw7NXg5KVP3ITPtqZ2S575A0wFkvgS2anqSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<![endif]-->
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="navbar__sub">
+          <div class="grid wide">
+            <div class="row">
+              <div class="col l-6 m-0 c-0">
+                <div class="subnav__left"><i class="far fa-clock"></i><span class="time__open">Open time: 8:00 - 18:00  Monday - Sunday</span>
+                  <ul class="social__icon-list">
+                    <li class="social__icon-item"><a class="social__icon-link fab fa-facebook-f" href="#"></a></li>
+                    <li class="social__icon-item"><a class="social__icon-link fab fa-twitter" href="#"></a></li>
+                    <li class="social__icon-item"><a class="social__icon-link fab fa-youtube" href="#"></a></li>
+                    <li class="social__icon-item"><a class="social__icon-link fab fa-vimeo-v" href="#"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col l-3 l-o-3 m-0 c-0">
+                <ul class="subnav__right-list">
+                  <li class="subnav__right-item"><a href="login.html"><i class="fas fa-user"></i><span>Đăng nhập</span></a></li>
+                  <li class="subnav__right-item"><a href="register.html"><i class="fas fa-user-plus"></i><span>Đăng kí</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="header">
+          <div class="grid wide">
+            <div class="row"> 
+              <div class="col l-6 m-10 c-12">
+                <div class="header__logo">
+                  <div class="row">
+                    <div class="col l-6 m-6 c-12"><a href="/"> 
+                        <div class="logo__name"><img class="img__green-shop" src="./assets/img/logo.png" alt="Green Shop"/></div>
+                        <p class="logo__slogan">Món quà từ thiên nhiên</p></a>
+                    </div>
+                    <div class="col l-6 m-0 c-0">
+                      <div class="logo__img"><img class="logo__img-first" src="./assets/img/logo-2.png" alt="Logo Green Shop 2"><img class="logo__img-second" src="./assets/img/logo-1.png" alt="Logo Green Shop 1"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col l-6 m-0 c-0">
+                <div class="header__contact"><i class="fas fa-phone-alt header__icon-phone"></i><span class="contact__title">HỖ TRỢ :</span><a class="contact__link--tel" href="tel:+0466742332">(04) 6674 2334 - </a><a class="contact__link--tel" href="tel:+0437868904">(04) 3786 8904</a></div>
+                <div class="header__search-wrap">
+                  <div class="header__search">
+                    <input class="form-control" type="text" placeholder="Tìm kiếm..." name="Search">
+                    <p class="contact__separate"></p><i class="fas fa-search icon--search"></i>
+                  </div><a class="header__product-qnt" href="cart.html"><i class="fas fa-shopping-basket"></i>
+                    <p class="qnt"></p></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <nav class="navbar">
+          <div class="grid wide">
+            <div class="row">
+              <div class="col l-12 m-12 c-0">   
+                <ul class="navbar__list"> 
+                  <li class="navbar__item"><a class="navbar__link" href="index.html">Trang chủ</a>
+                  </li>
+                  <li class="navbar__item"><a class="navbar__link" href="contact.html">Giới thiệu</a>
+                  </li>
+                  <li class="navbar__item"><a class="navbar__link" href="products.html">Sản phẩm</a><i class="fas fa-caret-down icon__subnav"></i>
+                    <ul class="navbar__product-list">
+                      <li class="navbar__product-item"><a class="navbar__product-link" href="products.html">Cây chậu treo</a></li>
+                      <li class="navbar__product-item"><a class="navbar__product-link" href="products.html">Cây có hoa</a></li>
+                      <li class="navbar__product-item"><a class="navbar__product-link" href="products.html">Cây day leo</a></li>
+                      <li class="navbar__product-item"><a class="navbar__product-link" href="products.html">Cây để bàn</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar__item"><a class="navbar__link" href="products.html">Sản phẩm mới</a><i class="fas fa-caret-down icon__subnav"></i>
+                    <ul class="navbar__product-list">
+                      <li class="navbar__product-item"><a class="navbar__product-link" href="products.html">Cây may mắn</a></li>
+                      <li class="navbar__product-item"><a class="navbar__product-link" href="products.html">Cây trang trí</a></li>
+                      <li class="navbar__product-item"><a class="navbar__product-link" href="products.html">Cây nội thất</a></li>
+                      <li class="navbar__product-item"><a class="navbar__product-link" href="products.html">Cây để bàn</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar__item"><a class="navbar__link" href="news.html">Tin tức</a>
+                  </li>
+                  <li class="navbar__item"><a class="navbar__link" href="contact.html">Liên hệ</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col l-0 m-0 c-12">
+                <div class="navbar__icon--mobile">
+                  <label class="navbar-menu" for="nav__mobile-input"><i class="fas fa-bars navbar__icon"></i></label>
+                  <div class="icon-right"><a href="#"><i class="fas fa-search icon-search"></i></a><a href="cart.html"> <i class="fas fa-shopping-basket"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col l-0 m-0 c-12">
+                <input class="nav__input" id="nav__mobile-input" type="checkbox" name="" hidden="">
+                <label class="nav__overlay" for="nav__mobile-input"></label>
+                <nav class="nav__mobile">
+                  <label class="nav__mobile-btn--close" for="nav__mobile-input"><i class="fas fa-times"></i></label>
+                  <ul class="navbar__mobile-list">
+                    <li class="navbar__mobile-item"><a class="nav__mobile-link" href="login.html">Đăng nhập</a></li>
+                    <li class="navbar__mobile-item"><a class="nav__mobile-link" href="register.html">Đăng kí</a></li>
+                    <li class="navbar__mobile-item"><a class="nav__mobile-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="navbar__mobile-item"><a class="nav__mobile-link" href="contact.html">Giới thiệu</a>
+                    </li>
+                    <li class="navbar__mobile-item"><a class="nav__mobile-link" href="products.html">Sản phẩm</a><i class="fas fa-caret-down icon__subnav"></i>
+                      <ul class="subnav__mobile-list">
+                        <li class="subnav__mobile-item"><a href="products.html">Cây chậu treo</a></li>
+                        <li class="subnav__mobile-item"><a href="products.html">Cây có hoa</a></li>
+                        <li class="subnav__mobile-item"><a href="products.html">Cây day leo</a></li>
+                        <li class="subnav__mobile-item"><a href="products.html">Cây để bàn</a></li>
+                      </ul>
+                    </li>
+                    <li class="navbar__mobile-item"><a class="nav__mobile-link" href="products.html">Sản phẩm mới</a><i class="fas fa-caret-down icon__subnav"></i>
+                      <ul class="subnav__mobile-list">
+                        <li class="subnav__mobile-item"><a href="products.html">Cây may mắn</a></li>
+                        <li class="subnav__mobile-item"><a href="products.html">Cây trang trí</a></li>
+                        <li class="subnav__mobile-item"><a href="products.html">Cây nội thất</a></li>
+                        <li class="subnav__mobile-item"><a href="products.html">Cây để bàn</a></li>
+                      </ul>
+                    </li>
+                    <li class="navbar__mobile-item"><a class="nav__mobile-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="navbar__mobile-item"><a class="nav__mobile-link" href="contact.html">Liên hệ</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="scroll-top"><a class="scroll-top__link" href="#"><i class="fas fa-chevron-up icon scroll-top__icon"></i></a></div>
+        <script type="module" src="./assets/js/showCountProduct.js"></script>
+      </header>
+      <main class="container">
+        <div class="grid wide"> 
+          <div class="row"> 
+            <div class="col l-12 m-12 c-12">
+              <div class="breadcrumbs"><a class="breadcrumbs__link" href="/"><span class="breadcrumbs__home">Home /</span></a><a class="breadcrumbs__link" href="/products.html"><span class="breadcrumbs__navigation">Danh sách sản phẩm /</span></a><a class="breadcrumbs__link" href="/"><span class="breadcrumbs__navigation">Cây Dạ Lam</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article class="product__detail-wrap">
+          <section class="product__detail--header"> 
+            <div class="grid wide"> 
+              <div class="row"> 
+                <div class="col l-4 img-wrap">
+                  <div class="img__main"> <img src="./assets/img/product/spx2-15.png" alt="Cây dạ lam"></div>
+                  <div class="img__similar-wrap">
+                    <div class="img__similar" style="--tooltip-img:../img/product/spx2-1.png;"><img src="./assets/img/product/spx2-1.png" alt="Cây dạ lam0"></div>
+                    <div class="img__similar-hover"><img src="./assets/img/product/spx2-1.png" alt="Cây dạ lam0"></div>
+                    <div class="img__similar" style="--tooltip-img:../img/product/spx2-2.png;"><img src="./assets/img/product/spx2-2.png" alt="Cây dạ lam1"></div>
+                    <div class="img__similar-hover"><img src="./assets/img/product/spx2-2.png" alt="Cây dạ lam1"></div>
+                    <div class="img__similar" style="--tooltip-img:../img/product/spx2-3.png;"><img src="./assets/img/product/spx2-3.png" alt="Cây dạ lam2"></div>
+                    <div class="img__similar-hover"><img src="./assets/img/product/spx2-3.png" alt="Cây dạ lam2"></div>
+                    <div class="img__similar" style="--tooltip-img:../img/product/spx2-4.png;"><img src="./assets/img/product/spx2-4.png" alt="Cây dạ lam3"></div>
+                    <div class="img__similar-hover"><img src="./assets/img/product/spx2-4.png" alt="Cây dạ lam3"></div>
+                    <div class="img__similar" style="--tooltip-img:../img/product/spx2-5.png;"><img src="./assets/img/product/spx2-5.png" alt="Cây dạ lam4"></div>
+                    <div class="img__similar-hover"><img src="./assets/img/product/spx2-5.png" alt="Cây dạ lam4"></div>
+                  </div>
+                </div>
+                <div class="col l-8">
+                  <div class="product__header--content">
+                    <h1 class="content__title">Cây dạ lam</h1><span class="content__star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    <div class="content__price"> <span class="content__price--sale">4.000.000 đ</span><span class="content__price--current">5.000.000 đ</span></div>
+                    <div class="separate"></div>
+                    <p class="content__dsc">Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0.8 - 1.2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến lá rộng khoảng từ 15 - 20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa, mặt dưới lá nhạt màu hơn. Lá cây dạ mọc cách cuống lá dài khi rụng để lại khía màu nâu nhạt.</p>
+                    <div class="separate"></div>
+                    <div class="content__qnt">
+                      <label class="content__price-label" for="qnt">Số lượng</label><span class="pqt-plus"><i class="fas fa-plus"></i></span>
+                      <button class="cart-button"><span class="added">1</span><i class="fa fa-shopping-cart"></i></button><span class="pqt-minus"><i class="fas fa-minus"></i></span>
+                    </div>
+                    <div class="separate"></div>
+                    <div class="product__control">
+                      <button class="btn btn__buy-now">Mua ngay</button><a class="product__control-link" href=""><i class="fas fa-search icon icon--border"></i></a>
+                      <input id="1" type="checkbox">
+                      <label class="item__heart-label" for="1"><i class="fas fa-heart icon icon--border"></i></label>
+                    </div>
+                    <div class="btn__share-list"> 
+                      <div class="btn__share-wrap">
+                        <div class="btn__share-item" tooltip-data="10"><a href="https://www.facebook.com/" target="_blank"><img src="./assets/img/share/facebook-share-button.png" alt="Facebook"></a></div>
+                        <div class="btn__share-qnt">
+                          <p>10</p>
+                        </div>
+                      </div>
+                      <div class="btn__share-wrap">
+                        <div class="btn__share-item" tooltip-data="15"><a href="https://twitter.com/" target="_blank"><img src="./assets/img/share/twitter-share-button.png" alt="Twitter"></a></div>
+                        <div class="btn__share-qnt">
+                          <p>15</p>
+                        </div>
+                      </div>
+                      <div class="btn__share-wrap">
+                        <div class="btn__share-item" tooltip-data="20"><a href="https://www.google.com.vn/?hl=vi" target="_blank"><img src="./assets/img/share/google-plus.png" alt="Google-Plus"></a></div>
+                        <div class="btn__share-qnt">
+                          <p>20</p>
+                        </div>
+                      </div>
+                      <div class="btn__share-wrap">
+                        <div class="btn__share-item" tooltip-data="0"><a href="https://www.google.com/drive/" target="_blank"><img src="./assets/img/share/share.png" alt="Share"></a></div>
+                        <div class="btn__share-qnt">
+                          <p>0</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="product__detail">
+            <div class="grid wide product__detail--border">
+              <div class="row no-gutters mx-4">
+                <div class="col l-4 m-4 c-12">
+                  <label class="label-title active" for="info">Thông tin sản phẩm</label>
+                </div>
+                <div class="col l-4 m-4 c-12">
+                  <label class="label-title" for="review">Khách hàng đánh giá</label>
+                </div>
+                <div class="col l-4 m-4 c-12">
+                  <label class="label-title" for="tag">Thẻ tag</label>
+                </div>
+              </div>
+              <div class="row product__detail-wrap">
+                <div class="product__info-wrap">
+                  <input id="info" type="radio" name="product-info" value="info" checked>
+                  <div class="col l-12 product__info">
+                    <p>Tên phổ thông: Dạ lam, Huỳnh tinh cảnh, Dong vằn</p><br/>
+                    <p>Tên khoa học: Calathea Zebrina</p><br/>
+                    <p>Họ thực vật: Marantaceae (Củ dong)</p><br/>
+                    <p>Chiều cao: 0.8 - 1.2m</p><br/>
+                    <p>Cây dạ lam có nguồn gốc từ Brazil, được du nhập và phân bố rộng khắc ở Việt Nam</p><br/>
+                    <p>Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt. Cây dạ lam thuộc loại cây chịu bóng bán phần hoặc hoàn toàn, nhu cầu nước tương đối cao. Cây được nhân giống từ tách bụi, cây mọc khỏe, tốc độ sinh trưởng nhanh với sức sống mạnh. Cây dạ lam vuon sai gon hoachau da lam. Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất-văn phòng. Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt. Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình.</p><br/>
+                  </div>
+                </div>
+                <div class="product__cmt-wrap">
+                  <input id="review" type="radio" name="product-info" value="review">
+                  <div class="col l-12 product__cmt"><span class="time"> 
+                      <time>16:40</time>
+                      <time>31/05/2021</time></span>
+                    <p>- Người dùng: Công Đạt</p>
+                    <p class="cmt">Cây đẹp.</p><span class="time"> 
+                      <time>16:45</time>
+                      <time>31/05/2021</time></span>
+                    <p>- Người dùng: Đạt</p>
+                    <p class="cmt">Cây xấu.</p>
+                  </div>
+                </div>
+                <div class="product__tag-wrap">
+                  <input id="tag" type="radio" name="product-info" value="tag">
+                  <div class="col l-12 product__tag"><a class="tag" href="mai">#Mai</a><a class="tag" href="lan">#lan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="product__same-category">
+            <div class="grid wide"> 
+              <div class="row"> 
+                <div class="col l-12 m-12 c-12">
+                  <div class="product__header">
+                    <h2 class="products__title">Sản phẩm cùng loại</h2>
+                    <div class="separate"></div>
+                    <div class="control-slide">
+                      <label for="slide8"><i class="fas fa-chevron-left icon"></i></label>
+                      <label for="slide9"><i class="fas fa-chevron-right icon"></i></label>
+                    </div>
+                  </div>
+                  <div class="product__slide-control">
+                    <input id="slide8" type="radio" name="slider-laptop-new" checked="checked"/>
+                    <input id="slide9" type="radio" name="slider-laptop-new"/>
+                    <div class="slider-product">
+                      <div class="overflow">
+                        <div class="inner__content">
+                          <div class="col l-3 m-6 c-12">
+                            <div class="product">
+                              <div class="product__header">
+                                <div class="product__header-img"><img src="./assets/img/product/spx2-15.png" alt="Cây danh dự"/></div><span style="background-color: #d64146;">- 25%</span>
+                                <div class="form__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a class="icon__link-search" href="products-detail.html"><i class="fas fa-search icon icon--detail"></i></a></div>
+                              </div>
+                              <div class="product__body"> 
+                                <p class="product__name">Cây danh dự</p><span class="product__star"><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                <p class="product__dsc"></p>
+                                <div class="product__price"><span class="product__price-sale">250.000 đ</span>
+                                </div>
+                                <div class="product__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a href="products-detail.html"><i class="fas fa-search icon icon--detail icon--border"></i></a>
+                                  <input type="checkbox" name="Cây danh dự"/>
+                                  <label class="item__heart-label"><i class="fas fa-heart icon icon--border"></i></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-6 c-12">
+                            <div class="product">
+                              <div class="product__header">
+                                <div class="product__header-img"><img src="./assets/img/product/spx2-7.png" alt="Cây xương rồng"/></div>
+                                <div class="form__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a class="icon__link-search" href="products-detail.html"><i class="fas fa-search icon icon--detail"></i></a></div>
+                              </div>
+                              <div class="product__body"> 
+                                <p class="product__name">Cây xương rồng</p><span class="product__star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                                <p class="product__dsc"></p>
+                                <div class="product__price"><span class="product__price-sale">250.000 đ</span>
+                                </div>
+                                <div class="product__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a href="products-detail.html"><i class="fas fa-search icon icon--detail icon--border"></i></a>
+                                  <input type="checkbox" name="Cây xương rồng"/>
+                                  <label class="item__heart-label"><i class="fas fa-heart icon icon--border"></i></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-6 c-12">
+                            <div class="product">
+                              <div class="product__header">
+                                <div class="product__header-img"><img src="./assets/img/product/spx2-12.png" alt="Cây dạ lam"/></div>
+                                <div class="form__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a class="icon__link-search" href="products-detail.html"><i class="fas fa-search icon icon--detail"></i></a></div>
+                              </div>
+                              <div class="product__body"> 
+                                <p class="product__name">Cây dạ lam</p><span class="product__star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                                <p class="product__dsc"></p>
+                                <div class="product__price"><span class="product__price-sale">250.000 đ</span>
+                                </div>
+                                <div class="product__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a href="products-detail.html"><i class="fas fa-search icon icon--detail icon--border"></i></a>
+                                  <input type="checkbox" name="Cây dạ lam"/>
+                                  <label class="item__heart-label"><i class="fas fa-heart icon icon--border"></i></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-6 c-12">
+                            <div class="product">
+                              <div class="product__header">
+                                <div class="product__header-img"><img src="./assets/img/product/spx2-11.png" alt="Cây dứa nhỏ"/></div>
+                                <div class="form__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a class="icon__link-search" href="products-detail.html"><i class="fas fa-search icon icon--detail"></i></a></div>
+                              </div>
+                              <div class="product__body"> 
+                                <p class="product__name">Cây dứa nhỏ</p><span class="product__star"><i class="fas fa-star"></i></span>
+                                <p class="product__dsc"></p>
+                                <div class="product__price"><span class="product__price-sale">250.000 đ</span>
+                                </div>
+                                <div class="product__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a href="products-detail.html"><i class="fas fa-search icon icon--detail icon--border"></i></a>
+                                  <input type="checkbox" name="Cây dứa nhỏ"/>
+                                  <label class="item__heart-label"><i class="fas fa-heart icon icon--border"></i></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-6 c-12">
+                            <div class="product">
+                              <div class="product__header">
+                                <div class="product__header-img"><img src="./assets/img/product/spx2-1.png" alt="Cây danh dự"/></div>
+                                <div class="form__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a class="icon__link-search" href="products-detail.html"><i class="fas fa-search icon icon--detail"></i></a></div>
+                              </div>
+                              <div class="product__body"> 
+                                <p class="product__name">Cây danh dự</p><span class="product__star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                <p class="product__dsc"></p>
+                                <div class="product__price"><span class="product__price-sale">680.000 đ</span>
+                                </div>
+                                <div class="product__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a href="products-detail.html"><i class="fas fa-search icon icon--detail icon--border"></i></a>
+                                  <input type="checkbox" name="Cây danh dự"/>
+                                  <label class="item__heart-label"><i class="fas fa-heart icon icon--border"></i></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-6 c-12">
+                            <div class="product">
+                              <div class="product__header">
+                                <div class="product__header-img"><img src="./assets/img/product/spx2-5.png" alt="Cây dạ lam"/></div>
+                                <div class="form__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a class="icon__link-search" href="products-detail.html"><i class="fas fa-search icon icon--detail"></i></a></div>
+                              </div>
+                              <div class="product__body"> 
+                                <p class="product__name">Cây dạ lam</p><span class="product__star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                                <p class="product__dsc"></p>
+                                <div class="product__price"><span class="product__price-sale">880.000 đ</span>
+                                </div>
+                                <div class="product__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a href="products-detail.html"><i class="fas fa-search icon icon--detail icon--border"></i></a>
+                                  <input type="checkbox" name="Cây dạ lam"/>
+                                  <label class="item__heart-label"><i class="fas fa-heart icon icon--border"></i></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-6 c-12">
+                            <div class="product">
+                              <div class="product__header">
+                                <div class="product__header-img"><img src="./assets/img/product/spx2-2.png" alt="Cây chân chim"/></div>
+                                <div class="form__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a class="icon__link-search" href="products-detail.html"><i class="fas fa-search icon icon--detail"></i></a></div>
+                              </div>
+                              <div class="product__body"> 
+                                <p class="product__name">Cây chân chim</p><span class="product__star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                <p class="product__dsc"></p>
+                                <div class="product__price"><span class="product__price-sale">750.000 đ</span>
+                                </div>
+                                <div class="product__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a href="products-detail.html"><i class="fas fa-search icon icon--detail icon--border"></i></a>
+                                  <input type="checkbox" name="Cây chân chim"/>
+                                  <label class="item__heart-label"><i class="fas fa-heart icon icon--border"></i></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-6 c-12">
+                            <div class="product">
+                              <div class="product__header">
+                                <div class="product__header-img"><img src="./assets/img/product/spx2-14.png" alt="Cây đa búp đỏ"/></div>
+                                <div class="form__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a class="icon__link-search" href="products-detail.html"><i class="fas fa-search icon icon--detail"></i></a></div>
+                              </div>
+                              <div class="product__body"> 
+                                <p class="product__name">Cây đa búp đỏ</p><span class="product__star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                                <p class="product__dsc"></p>
+                                <div class="product__price"><span class="product__price-sale">150.000 đ</span>
+                                </div>
+                                <div class="product__control"><a class="btn btn__buy-now" href="cart.html">Mua ngay</a><a href="products-detail.html"><i class="fas fa-search icon icon--detail icon--border"></i></a>
+                                  <input type="checkbox" name="Cây đa búp đỏ"/>
+                                  <label class="item__heart-label"><i class="fas fa-heart icon icon--border"></i></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <script type="module" src="./assets/js/showProductDetail.js"></script>
+        <script src="./assets/js/addToCart.js"></script>
+        <script src="./assets/js/inputNumber.js"></script>
+      </main>
+      <footer>
+        <div class="footer__header"> 
+          <div class="grid wide"> 
+            <div class="row">
+              <div class="col l-4 m-12 c-12">
+                <h3 class="footer__title">KÊNH THÔNG TIN TỪ CHÚNG TÔI :</h3>
+                <ul class="social__icon-list">
+                  <li class="social__icon-item"><a class="social__icon-link fab fa-facebook-f" href="#"></a></li>
+                  <li class="social__icon-item"><a class="social__icon-link fab fa-twitter" href="#"></a></li>
+                  <li class="social__icon-item"><a class="social__icon-link fab fa-youtube" href="#"></a></li>
+                  <li class="social__icon-item"><a class="social__icon-link fab fa-vimeo-v" href="#"></a></li>
+                </ul>
+              </div>
+              <div class="col l-2 m-4 c-12">
+                <h3 class="footer__title">
+                   ĐĂNG KÍ NHẬN EMAIL TỪ CHÚNG TÔI</h3>
+              </div>
+              <div class="col l-5 l-o-1 m-8 c-12">
+                <form class="form__register" action="/" method="post">
+                  <input class="form-control" type="email" name="Email">
+                  <button class="register__btn" type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__body"> 
+          <div class="grid wide">
+            <div class="row">
+              <div class="col l-4 m-6 c-12">
+                <div class="footer__logo-wrap"><a href="/"> 
+                    <div class="logo__name"><img class="img__green-shop" src="./assets/img/logo.png" alt="Green Shop"/></div>
+                    <p class="logo__slogan">Món quà từ thiên nhiên</p></a>
+                </div>
+                <div class="footer__logo-body"> 
+                  <p class="footer__description">
+                    Green shop được thành lập từ 8/2010 được sự tin tưởng của 
+                    khách hàng trong suốt thời gian hoạt động đên nay cửa hàng 
+                    ngày một phát triển
+                  </p>
+                  <ul class="footer__contact-list">
+                    <li class="footer__contact-item"> <i class="fas fa-mobile-alt"> </i><span>Điện thoại :</span><a class="contact__link" href="tel:+8466558868">(84-4) 66.558.868</a></li>
+                    <li class="footer__contact-item"> <i class="far fa-envelope"></i><span>Email :</span><a class="contact__link" href="mailto:info@dkt.com.vn">info@dkt.com.vn</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col l-2 m-6 c-12">
+                <h3 class="footer__body-title">THÔNG TIN KHÁCH HÀNG</h3>
+                <ul class="footer__list">
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Tài khoản của tôi</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Sản phẩm yêu thích</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Lịch sử mua hàng</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Chính sách dổi trả</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Góp ý, khiếu nại</a></li>
+                </ul>
+              </div>
+              <div class="col l-2 m-6 c-12">
+                <h3 class="footer__body-title">HỖ TRỢ DỊCH VỤ</h3>
+                <ul class="footer__list">
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Hệ thống cửa hàng</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Hướng dẫn mua hàng</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Hướng dẫn thanh toán</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Tích điểm đổi quà</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Câu hỏi thường gặp</a></li>
+                </ul>
+              </div>
+              <div class="col l-2 m-6 c-12">
+                <h3 class="footer__body-title">CHÍNH SÁCH ƯU ĐÃI</h3>
+                <ul class="footer__list">
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Chính sách giao hàng</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Chính sách đổi trả sản phẩm</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Chính sách bảo hành</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Giới thiệu sản phẩm mới</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Chính sách trả góp</a></li>
+                </ul>
+              </div>
+              <div class="col l-2 m-6 c-12">
+                <h3 class="footer__body-title">TIN TỨC</h3>
+                <ul class="footer__list">
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Tin tức</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Khuyễn mãi</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Tuyển dụng</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Download</a></li>
+                  <li class="footer__item"><i class="fas fa-angle-right"></i><a class="footer__item-link" href="#" target="_blank">Tags</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__other"> 
+          <div class="grid wide">
+            <div class="row">
+              <div class="col l-12 m-12 c-0">
+                <div class="other__wrap">
+                  <ul class="other__list"> 
+                    <li class="other__item"> <a class="other__item-link" href="#">Sitemap</a></li>
+                    <li class="other__item"> <a class="other__item-link" href="#">Danh mục sản phẩm</a></li>
+                    <li class="other__item"> <a class="other__item-link" href="#">Hợp tác</a></li>
+                    <li class="other__item"> <a class="other__item-link" href="#">Thông tin liên hệ</a></li>
+                    <li class="other__item"> <a class="other__item-link" href="#">Câu hỏi thường gặp</a></li>
+                  </ul>
+                  <ul class="other__list"> 
+                    <li class="other__item"> <a class="other__item-link" href="#"><i class="fab fa-cc-visa"></i></a></li>
+                    <li class="other__item"> <a class="other__item-link" href="#"><i class="fab fa-cc-mastercard"></i></a></li>
+                    <li class="other__item"> <a class="other__item-link" href="#"><i class="fab fa-cc-paypal"></i></a></li>
+                    <li class="other__item"> <a class="other__item-link" href="#"><i class="fab fa-cc-discover"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="copy-right">Thiết kế bởi<a href="#">Bizweb &copy;</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
