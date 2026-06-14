@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   BASE
+   ============================================================ */
+@layer base {
+  :root {
+    --header-h: 80px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-forest-800;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: theme('colors.forest.700');
+    color: theme('colors.cream');
+  }
+
+  /* Refined botanical scrollbar */
+  ::-webkit-scrollbar { width: 11px; }
+  ::-webkit-scrollbar-track { background: theme('colors.sage.50'); }
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.forest.300');
+    border-radius: 999px;
+    border: 3px solid theme('colors.sage.50');
+  }
+  ::-webkit-scrollbar-thumb:hover { background: theme('colors.forest.500'); }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.gold.500');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  img { @apply select-none; }
+}
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-[1240px] px-5 sm:px-6 lg:px-8; }
+
+  /* Eyebrow / section label */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold-600;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply h-px w-8 bg-gold-500;
+  }
+
+  .section-title {
+    @apply font-display text-4xl sm:text-5xl font-semibold leading-[1.05] text-forest-800;
+  }
+
+  /* ---- Buttons ---- */
+  .btn {
+    @apply relative isolate inline-flex items-center justify-center gap-2 overflow-hidden rounded-full
+           px-7 py-3 text-sm font-semibold tracking-wide transition-all duration-300 ease-smooth
+           cursor-pointer select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+  /* Light sheen sweep on hover — a quiet, hand-crafted shine */
+  .btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: translateX(-130%) skewX(-18deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+    transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn:hover::after { transform: translateX(130%) skewX(-18deg); }
+  .btn-primary {
+    @apply bg-forest-700 text-cream shadow-soft hover:bg-forest-800 hover:shadow-lift
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-gold {
+    @apply bg-gradient-to-br from-gold-400 to-gold-600 text-forest-900 shadow-soft
+           hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline {
+    @apply border border-forest-700/30 text-forest-700 hover:bg-forest-700 hover:text-cream
+           hover:border-forest-700;
+  }
+  .btn-ghost {
+    @apply text-forest-700 hover:bg-forest-50;
+  }
+
+  /* ---- Product card ---- */
+  .product-card {
+    @apply relative flex flex-col overflow-hidden rounded-2xl bg-ivory shadow-card
+           transition-all duration-500 ease-smooth hover:shadow-lift hover:-translate-y-1
+           cursor-pointer;
+  }
+  .product-media {
+    @apply relative overflow-hidden bg-sage-50;
+  }
+  .product-media img {
+    @apply h-full w-full object-cover transition-transform duration-[900ms] ease-smooth
+           group-hover:scale-[1.07];
+  }
+  .badge-sale {
+    @apply absolute left-3 top-3 z-10 rounded-full bg-forest-800/95 px-3 py-1 text-[11px]
+           font-semibold tracking-wide text-gold-300 backdrop-blur;
+  }
+  .card-actions {
+    @apply absolute inset-x-0 bottom-0 z-10 flex translate-y-4 items-center justify-center gap-2
+           p-3 opacity-0 transition-all duration-500 ease-smooth
+           group-hover:translate-y-0 group-hover:opacity-100;
+  }
+  .icon-btn {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-full bg-ivory/95 text-forest-700
+           shadow-soft backdrop-blur transition-all duration-300 hover:bg-gold-500 hover:text-forest-900
+           cursor-pointer;
+  }
+
+  /* ---- Price ---- */
+  .price-now { @apply font-semibold text-forest-700; }
+  .price-old { @apply text-sm text-muted line-through decoration-clay/60; }
+
+  /* ---- Inputs ---- */
+  .field {
+    @apply w-full rounded-xl border border-forest-200 bg-ivory px-4 py-3 text-[15px] text-ink
+           placeholder:text-muted/70 transition-all duration-200
+           focus:border-forest-500 focus:outline-none focus:ring-4 focus:ring-forest-500/10;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-forest-700;
+  }
+  .form-group.invalid .field {
+    @apply border-rose-400 focus:ring-rose-400/20;
+  }
+  .form-message {
+    @apply mt-1 block min-h-[18px] text-[13px] text-rose-500;
+  }
+
+  /* ---- Glass header ---- */
+  .glass {
+    background: rgba(250, 247, 239, 0.72);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+  }
+
+  /* Header icon button */
+  .icon-link {
+    @apply relative flex h-10 w-10 items-center justify-center rounded-full text-forest-700
+           transition-all duration-200 hover:bg-forest-50 hover:text-forest-900 cursor-pointer;
+  }
+
+  /* Sticky nav shrink + shadow on scroll */
+  #site-header { @apply sticky top-0 z-[70]; }
+  #site-header .site-nav { background: rgba(250, 247, 239, 0.7); }
+  #site-header.is-scrolled .site-nav {
+    @apply shadow-soft;
+    background: rgba(250, 247, 239, 0.9);
+  }
+  #site-header.is-scrolled .site-nav .container-x { @apply h-[62px]; }
+
+  /* Sidebar filter items */
+  .filter-item {
+    @apply flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm
+           text-forest-700/85 transition-colors duration-200 hover:bg-forest-50 hover:text-forest-900
+           cursor-pointer;
+  }
+  .filter-item.is-active {
+    @apply bg-forest-700 text-cream;
+  }
+  .filter-count {
+    @apply rounded-full bg-forest-100 px-2 py-0.5 text-xs font-semibold text-forest-600;
+  }
+  .filter-item.is-active .filter-count { @apply bg-cream/20 text-cream; }
+
+  .swatch {
+    @apply h-8 w-8 rounded-full border-2 border-transparent ring-1 ring-forest-200 transition-all
+           duration-200 hover:scale-110 cursor-pointer;
+  }
+  .swatch.is-active { @apply border-gold-500 ring-gold-500; }
+
+  .price-pill {
+    @apply rounded-full border border-forest-200 px-4 py-1.5 text-sm text-forest-700
+           transition-all duration-200 hover:border-forest-500 hover:bg-forest-50 cursor-pointer;
+  }
+  .price-pill.is-active { @apply border-forest-700 bg-forest-700 text-cream; }
+
+  /* Pagination */
+  .page-btn {
+    @apply flex h-10 min-w-[40px] items-center justify-center rounded-full border border-forest-200
+           px-3 text-sm font-semibold text-forest-700 transition-all duration-200
+           hover:border-forest-500 hover:bg-forest-50 cursor-pointer;
+  }
+  .page-btn.is-active {
+    @apply border-forest-700 bg-forest-700 text-cream hover:bg-forest-800;
+  }
+
+  /* Layout toggle */
+  .layout-btn {
+    @apply flex h-10 w-10 items-center justify-center rounded-lg text-forest-500 transition-colors
+           duration-200 hover:bg-forest-50 hover:text-forest-800 cursor-pointer;
+  }
+  .layout-btn.is-active { @apply bg-forest-700 text-cream hover:bg-forest-700 hover:text-cream; }
+
+  /* Star rating */
+  .stars { @apply inline-flex items-center gap-0.5 text-gold-500; }
+
+  /* Quantity stepper */
+  .qty {
+    @apply inline-flex items-center rounded-full border border-forest-200 bg-ivory;
+  }
+  .qty span {
+    @apply flex h-10 w-10 cursor-pointer items-center justify-center text-forest-600
+           transition-colors hover:text-forest-900 select-none;
+  }
+  .qty input {
+    @apply h-10 w-12 border-x border-forest-200 bg-transparent text-center text-sm font-semibold
+           text-forest-800 outline-none [appearance:textfield];
+  }
+  .qty input::-webkit-outer-spin-button,
+  .qty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+  /* Link underline animation */
+  .link-underline {
+    @apply relative;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-px w-0 bg-gold-500 transition-all duration-300 ease-smooth;
+  }
+  .link-underline:hover::after { @apply w-full; }
+}
+
+/* ============================================================
+   ANIMATIONS / REVEAL
+   ============================================================ */
+@layer utilities {
+  /* Scroll reveal — toggled by IntersectionObserver. Adds a soft
+     focus-pull (blur -> sharp) so content settles, not just slides. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    filter: blur(7px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                filter 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform, filter;
+  }
+  .reveal.in { opacity: 1; transform: none; filter: none; }
+  .reveal-delay-1 { transition-delay: 0.09s; }
+  .reveal-delay-2 { transition-delay: 0.18s; }
+  .reveal-delay-3 { transition-delay: 0.27s; }
+  .reveal-delay-4 { transition-delay: 0.36s; }
+  .reveal-delay-5 { transition-delay: 0.45s; }
+
+  /* The eyebrow's leading rule draws itself in when its block reveals */
+  .eyebrow::before { transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s; }
+  .reveal:not(.in) .eyebrow::before,
+  .eyebrow.reveal:not(.in)::before { width: 0; }
+
+  .text-balance { text-wrap: balance; }
+
+  /* Shimmer skeleton */
+  .skeleton {
+    background: linear-gradient(90deg,
+      theme('colors.sage.100') 25%,
+      theme('colors.sage.50') 37%,
+      theme('colors.sage.100') 63%);
+    background-size: 200% 100%;
+    @apply animate-shimmer rounded-lg;
+  }
+}
+
+/* ---- Toast ---- */
+#toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: calc(100vw - 48px);
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 300px;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 14px;
+  border-left: 4px solid theme('colors.forest.500');
+  box-shadow: 0 12px 34px rgba(20, 36, 27, 0.16);
+}
+.toast--success { border-left-color: theme('colors.forest.500'); }
+.toast--info { border-left-color: theme('colors.gold.500'); }
+.toast--warning { border-left-color: #E0A93B; }
+.toast--error { border-left-color: #DC6B5C; }
+.toast__icon { font-size: 22px; }
+.toast--success .toast__icon { color: theme('colors.forest.500'); }
+.toast--info .toast__icon { color: theme('colors.gold.500'); }
+.toast--warning .toast__icon { color: #E0A93B; }
+.toast--error .toast__icon { color: #DC6B5C; }
+.toast__title { font-size: 15px; font-weight: 600; color: theme('colors.ink'); margin: 0; }
+.toast__msg { font-size: 13px; color: theme('colors.muted'); margin: 2px 0 0; }
+.toast__body { flex: 1; }
+.toast__close { color: theme('colors.muted'); cursor: pointer; padding: 4px; transition: color .2s; }
+.toast__close:hover { color: theme('colors.ink'); }
+
+/* ============================================================
+   DEPTH & TEXTURE  — "expensive, not busier"
+   ============================================================ */
+
+/* Whole-site film grain: a fixed, ultra-subtle fractal-noise veil.
+   Reads as fine print stock / matte paper rather than flat screen fill. */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Tonal section washes — replace flat fills with quiet vertical depth */
+.bg-wash-sage {
+  background:
+    radial-gradient(120% 80% at 50% -10%, theme('colors.cream') 0%, transparent 55%),
+    linear-gradient(180deg, theme('colors.sage.50') 0%, theme('colors.cream') 50%, theme('colors.sage.50') 100%);
+}
+.bg-wash-ivory {
+  background: linear-gradient(180deg, theme('colors.cream') 0%, theme('colors.ivory') 40%, theme('colors.sage.50') 100%);
+}
+.bg-wash-forest {
+  background:
+    radial-gradient(90% 60% at 80% 0%, theme('colors.forest.700') 0%, transparent 60%),
+    radial-gradient(70% 60% at 0% 100%, theme('colors.forest.900') 0%, transparent 55%),
+    theme('colors.forest.800');
+}
+
+/* Hairline gold rule — a fine jeweller's line between sections */
+.hairline {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(90deg, transparent, rgba(194, 161, 77, 0.55), transparent);
+}
+
+/* Botanical line-art watermark — large, faint, off-canvas */
+.leaf-mark {
+  position: absolute;
+  pointer-events: none;
+  color: currentColor;
+  opacity: 0.06;
+}
+
+/* Product image — soft veil + spring on hover */
+.product-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(20, 36, 27, 0.34) 0%, transparent 52%);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .product-media::after { opacity: 1; }
+.icon-btn { transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s, color 0.25s; }
+.icon-btn:hover { transform: translateY(-2px) scale(1.06); }
+
+/* Cart badge spring pop on add */
+@keyframes badgePop {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.55); }
+  60%  { transform: scale(0.85); }
+  100% { transform: scale(1); }
+}
+.qnt.pop { animation: badgePop 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* Magnetic elements glide back smoothly when the pointer leaves */
+[data-magnetic] { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); will-change: transform; }
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+  body::after { display: none; }
+  [data-magnetic] { transform: none !important; }
+}
